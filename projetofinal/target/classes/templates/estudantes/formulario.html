@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" 
+    xmlns:th="http://thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{template.html}"
+>
+<head>
+    
+    <title>Cadastro de Estudante</title>
+</head>
+<body>
+<div layout:fragment="conteudo">
+<h1>Cadastro de estudantes</h1>
+<form method="post" action="/estudantes">
+    
+    <div>
+    <label for="matricula">Matricula:</label>
+    <input id="matricula" name="matricula">
+    </div>  
+
+    <br/>
+    <div>
+    <label for="nome">Nome:(completo)</label>
+    <input id="nome" name="nome">
+    </div>
+
+    <br/>
+
+    <div>
+    <label for="email">Email:</label>
+    <input id="email" name="email">
+    </div>
+
+    <br/>
+
+    <div>
+    <label for="ano">Ano (agresso)</label>
+    <input id="ano" name="ano">
+    </div>
+    <br/>
+    <input type="submit" value="Cadastrar">
+</form>
+</div>
+</body>
+</html>

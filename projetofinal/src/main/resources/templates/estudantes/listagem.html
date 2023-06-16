@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" 
+    xmlns:th="http://thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{template.html}"
+>
+<head>
+    <title>Lista de Estudantes</title>
+</head>
+<body>
+
+<div layout:fragment="conteudo">  
+<h1>Lista de estudantes
+    <a href="/filmes/formulario"></a>
+
+</h1>
+
+<table>
+    
+    <thead>
+        <tr>
+            <th>MATRICULA</th>
+            <th>NOME</th>                        
+            <th>EMAIL</th>                        
+            <th>ANO</th>                        
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="estudante : ${lista}">
+            <td th:text="${estudante.matricula}"></td>
+            <td th:text="${estudante.nome}"></td>
+            <td th:text="${estudante.email}"></td>
+            <td th:text="${estudante.ano}"></td>
+        </tr>
+    </tbody>
+</table>
+</div> 
+</body>
+</html>
